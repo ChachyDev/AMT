@@ -6,7 +6,7 @@ import com.uchuhimo.konf.source.json.toJson
 import java.io.File
 
 val defaultConfig = Config {
-    addSpecs(DirectorySpec)
+    addSpecs(DirectorySpec, RepoSpec)
     if (!getOSConfigFile().exists()) {
         getOSConfigFolder().mkdirs()
         getOSConfigFile().createNewFile()
@@ -24,3 +24,5 @@ private fun getOSConfigFolder() = with(System.getProperty("os.name")) {
 }
 
 private fun getOSConfigFile() = File(getOSConfigFolder(), "config.json")
+
+fun Config.save() = toJson.toFile(getOSConfigFile())

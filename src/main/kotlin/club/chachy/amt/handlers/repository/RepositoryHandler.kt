@@ -3,6 +3,8 @@ package club.chachy.amt.handlers.repository
 import club.chachy.amt.handlers.repository.data.Package
 import club.chachy.amt.handlers.repository.data.Repository
 import club.chachy.amt.handlers.repository.data.Vendor
+import club.chachy.amt.handlers.storage.impl.RepoSpec
+import club.chachy.amt.handlers.storage.impl.defaultConfig
 
 /**
  * Used for handling implementations of repositories.
@@ -45,6 +47,6 @@ interface RepositoryHandler {
     fun removeRepository(repository: Repository) = repositories.remove(repository)
 
     companion object {
-        private val repos = mutableListOf(Repository("http://localhost:8080"))
+        private val repos = defaultConfig[RepoSpec.repos]
     }
 }

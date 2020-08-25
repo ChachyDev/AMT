@@ -10,7 +10,11 @@ import com.github.ajalt.clikt.parameters.arguments.argument
 import com.github.ajalt.clikt.parameters.arguments.multiple
 import java.io.File
 
-class Remove(private val repositoryHandler: RepositoryHandler, private val storageHandler: StorageHandler, private val downloadHandler: DownloadHandler) : CliktCommand() {
+class Remove(
+    private val repositoryHandler: RepositoryHandler,
+    private val storageHandler: StorageHandler,
+    private val downloadHandler: DownloadHandler
+) : CliktCommand() {
     private val packages by argument().multiple(true)
 
     override fun run() {
