@@ -9,7 +9,7 @@ AMT uses a combination of a frontend client (which is stored in this repository)
 TODO:
 
 - [x] Base for installing packages
-- [] Deleting packages
+- [x] Deleting packages
 - [] Updating packages
 - [] Add repositories
 - [] Delete repositories
