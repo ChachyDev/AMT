@@ -13,7 +13,7 @@ import club.chachy.amt.handlers.repository.data.Vendor
 
 interface RepositoryHandler {
     val repositories: MutableList<Repository>
-        get() = mutableListOf(Repository("http://localhost:8080"))
+        get() = repos // Hardcoded repo will be removed soon.
 
     /**
      * Used to process packages
@@ -43,4 +43,8 @@ interface RepositoryHandler {
     fun addRepository(repository: Repository) = repositories.add(repository)
 
     fun removeRepository(repository: Repository) = repositories.remove(repository)
+
+    companion object {
+        private val repos = mutableListOf(Repository("http://localhost:8080"))
+    }
 }
