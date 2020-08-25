@@ -23,7 +23,7 @@ jobs:
     - name: Gradle Cache
       uses: burrunan/gradle-cache-action@38a814592703994e897806bfccde333536f21d69
       with:
-        with execution-only-caches: true
+        execution-only-caches: true
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
