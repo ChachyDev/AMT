@@ -4,7 +4,7 @@ The simple minecraft mod package manager
 Example:
 ![Example](.github/images/cmd.gif)
 
-AMT uses a combination of a frontend client (which is stored in this repository) and a backend which is ran to host the mod jars. 
+AMT uses a combination of a frontend client (which is stored in this repository), and a backend which is ran on a server to host the mod jars. 
 
 TODO:
 
