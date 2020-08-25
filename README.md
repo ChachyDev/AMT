@@ -1,4 +1,4 @@
-# AMT 
+# AMT - Advanced ModPackageManager Tool
 The simple minecraft mod package manager
 
 Example:
